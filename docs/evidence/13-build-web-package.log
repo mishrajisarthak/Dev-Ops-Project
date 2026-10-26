@@ -1,0 +1,24 @@
+
+> folio-frontend@2.0.0 package
+> npm pack --pack-destination ../packages
+
+npm notice
+npm notice 📦  folio-frontend@2.0.0
+npm notice Tarball Contents
+npm notice 233B README.md
+npm notice 23.2kB dist/assets/index-ComGMWcI.css
+npm notice 254.0kB dist/assets/index-DH49PWtT.js
+npm notice 578B dist/index.html
+npm notice 632B nginx.conf
+npm notice 614B package.json
+npm notice Tarball Details
+npm notice name: folio-frontend
+npm notice version: 2.0.0
+npm notice filename: folio-frontend-2.0.0.tgz
+npm notice package size: 84.6 kB
+npm notice unpacked size: 279.3 kB
+npm notice shasum: d527487d1829a89da6f0d78fc7ab0f41f0dd031d
+npm notice integrity: sha512-oLO+2Jo8H//gF[...]XwuOsugdH0SSQ==
+npm notice total files: 6
+npm notice
+folio-frontend-2.0.0.tgz

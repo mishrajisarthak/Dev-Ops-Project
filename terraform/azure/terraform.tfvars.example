@@ -1,0 +1,8 @@
+# Example Azure Terraform Variables
+# Copy to terraform.tfvars and customize if needed:
+
+location            = "eastus"
+resource_group_name = "rg-folio-capstone"
+cluster_name        = "aks-folio"
+vm_size             = "Standard_B2s"
+node_count          = 2

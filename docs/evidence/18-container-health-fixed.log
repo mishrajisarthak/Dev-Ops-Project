@@ -1,0 +1,159 @@
+ Image devops-project-backend Building 
+ Image devops-project-frontend Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.02kB done
+#1 DONE 0.0s
+
+#2 [backend internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.18kB done
+#2 DONE 0.0s
+
+#3 [frontend internal] load build definition from Dockerfile
+#3 transferring dockerfile: 697B done
+#3 DONE 0.0s
+
+#4 [frontend internal] load metadata for docker.io/nginxinc/nginx-unprivileged:alpine
+#4 ...
+
+#5 [backend internal] load metadata for docker.io/library/python:3.12-slim
+#5 DONE 0.8s
+
+#4 [frontend internal] load metadata for docker.io/nginxinc/nginx-unprivileged:alpine
+#4 DONE 0.8s
+
+#6 [backend internal] load .dockerignore
+#6 transferring context: 105B done
+#6 DONE 0.0s
+
+#7 [frontend internal] load metadata for docker.io/library/node:24-alpine
+#7 DONE 0.8s
+
+#8 [frontend internal] load .dockerignore
+#8 transferring context: 64B done
+#8 DONE 0.0s
+
+#9 [frontend internal] load build context
+#9 transferring context: 322B done
+#9 DONE 0.0s
+
+#10 [backend  1/10] FROM docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704
+#10 resolve docker.io/library/python:3.12-slim@sha256:a0f57064cbdcd6285fa45f51237ab0b35ea8ebaed06a1f5973e89e19dfb86704 0.0s done
+#10 DONE 0.0s
+
+#11 [frontend builder 1/7] FROM docker.io/library/node:24-alpine@sha256:06d7adf3e0ef61a13f1d28682726366f97a15aa1888c934d3ecec86c33918b53
+#11 resolve docker.io/library/node:24-alpine@sha256:06d7adf3e0ef61a13f1d28682726366f97a15aa1888c934d3ecec86c33918b53 0.0s done
+#11 DONE 0.0s
+
+#12 [frontend runtime 1/3] FROM docker.io/nginxinc/nginx-unprivileged:alpine@sha256:b5047b9b76845eac124358373c6852377c52e4b05834a47647e955dd91cb8f1e
+#12 resolve docker.io/nginxinc/nginx-unprivileged:alpine@sha256:b5047b9b76845eac124358373c6852377c52e4b05834a47647e955dd91cb8f1e 0.0s done
+#12 DONE 0.0s
+
+#13 [frontend builder 7/7] RUN npm run build
+#13 CACHED
+
+#14 [frontend builder 3/7] COPY package.json package-lock.json ./
+#14 CACHED
+
+#15 [frontend builder 4/7] RUN npm ci
+#15 CACHED
+
+#16 [frontend builder 2/7] WORKDIR /app
+#16 CACHED
+
+#17 [frontend builder 5/7] COPY index.html vite.config.js ./
+#17 CACHED
+
+#18 [frontend builder 6/7] COPY src/ src/
+#18 CACHED
+
+#19 [frontend runtime 2/3] COPY --from=builder /app/dist /usr/share/nginx/html
+#19 CACHED
+
+#20 [frontend runtime 3/3] COPY nginx.conf /etc/nginx/templates/default.conf.template
+#20 CACHED
+
+#21 [backend internal] load build context
+#21 transferring context: 18.14kB 0.0s done
+#21 DONE 0.0s
+
+#22 [backend  3/10] RUN apt-get update && apt-get install -y --no-install-recommends curl &&     rm -rf /var/lib/apt/lists/*
+#22 CACHED
+
+#23 [backend  4/10] RUN groupadd -g 1001 appgroup &&     useradd -u 1001 -g appgroup -s /bin/bash -m appuser
+#23 CACHED
+
+#24 [backend  6/10] RUN pip install --no-cache-dir --upgrade pip &&     pip install --no-cache-dir -r requirements.txt
+#24 CACHED
+
+#25 [backend  2/10] WORKDIR /app
+#25 CACHED
+
+#26 [backend  5/10] COPY requirements.txt .
+#26 CACHED
+
+#27 [backend  7/10] COPY alembic.ini .
+#27 CACHED
+
+#28 [frontend] exporting to image
+#28 exporting layers done
+#28 exporting manifest sha256:6dd751f4b5738e4a63b0ebb6ab655b5d588bb8ef6334d17252f3674b90d56fdc 0.0s done
+#28 exporting config sha256:a40df7e30a9a144b7945a3a1ad840db4d97183b02a08bc24da92e139485745e8 0.0s done
+#28 exporting attestation manifest sha256:61b64596ccbfb8ec782588a33481b3f58960f4d1da24c9be5cfc11ef25bc8102 0.0s done
+#28 exporting manifest list sha256:8fae276b108d1fa6b7e4549e0e183caa815c63dd7e0101068ab8788fe5a27b48 0.0s done
+#28 naming to docker.io/library/devops-project-frontend:latest done
+#28 unpacking to docker.io/library/devops-project-frontend:latest 0.0s done
+#28 DONE 0.1s
+
+#29 [backend  8/10] COPY alembic/ alembic/
+#29 DONE 0.1s
+
+#30 [backend  9/10] COPY app/ app/
+#30 DONE 0.1s
+
+#31 [backend 10/10] RUN chown -R appuser:appgroup /app
+#31 DONE 0.2s
+
+#32 [frontend] resolving provenance for metadata file
+#32 DONE 0.0s
+
+#33 [backend] exporting to image
+#33 exporting layers 0.1s done
+#33 exporting manifest sha256:097eb20077b82700d76712448ad8cf3620ed0dfa8f959b5ebf2e03aa6aaf207d done
+#33 exporting config sha256:ea412bf2d02fdcc50285ac5e079a7edc3024a0668e534b97d0c4b64f6922c8b7 0.0s done
+#33 exporting attestation manifest sha256:e0464112a5ec10a372fc5e452f51738c1da42200d6910eb88350f672fb2b4b63 0.0s done
+#33 exporting manifest list sha256:42d48ef80bd25287139fee0967e5f972d24e7aeb58f248657228b536cc54b341 0.0s done
+#33 naming to docker.io/library/devops-project-backend:latest done
+#33 unpacking to docker.io/library/devops-project-backend:latest 0.1s done
+#33 DONE 0.3s
+
+#34 [backend] resolving provenance for metadata file
+#34 DONE 0.0s
+ Image devops-project-backend Built 
+ Image devops-project-frontend Built 
+ Container folio-postgres Recreate 
+ Container folio-postgres Recreated 
+ Container folio-backend Recreate 
+ Container folio-backend Recreated 
+ Container folio-frontend Recreate 
+ Container folio-frontend Recreated 
+ Container folio-postgres Starting 
+ Container folio-postgres Started 
+ Container folio-postgres Waiting 
+ Container folio-postgres Healthy 
+ Container folio-backend Starting 
+ Container folio-backend Started 
+ Container folio-backend Waiting 
+ Container folio-backend Healthy 
+ Container folio-frontend Starting 
+ Container folio-frontend Started 
+ Container folio-frontend Waiting 
+ Container folio-postgres Waiting 
+ Container folio-backend Waiting 
+ Container folio-backend Healthy 
+ Container folio-postgres Healthy 
+ Container folio-frontend Healthy 
+Seeded 8 titles, 21 copies, 6 members, 5 open loans (2 overdue), and 1 returned loan.
+NAME             IMAGE                     COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+folio-backend    devops-project-backend    "sh -c 'python -m ap…"   backend    21 seconds ago   Up 11 seconds (healthy)   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp
+folio-frontend   devops-project-frontend   "/docker-entrypoint.…"   frontend   18 seconds ago   Up 6 seconds (healthy)    0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp
+folio-postgres   postgres:17-alpine        "docker-entrypoint.s…"   postgres   22 seconds ago   Up 17 seconds (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp

@@ -1,0 +1,10 @@
+All checks passed!
+PASS workflow job: backend (10 steps)
+PASS workflow job: frontend (8 steps)
+PASS workflow job: integration (15 steps)
+PASS workflow job: images (8 steps)
+PASS workflow YAML, job dependencies, package permissions and image matrix
+==> Linting helm/folio
+[INFO] Chart.yaml: icon is recommended
+
+1 chart(s) linted, 0 chart(s) failed

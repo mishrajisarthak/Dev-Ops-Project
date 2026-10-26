@@ -1,0 +1,9 @@
+{
+  "name": "07-static-checks",
+  "output": "BLE001 Do not catch blind exception: `Exception`\n  --> scripts\\verify_persistence.py:35:16\n   |\n33 |                     ready = True\n34 |                     break\n35 |         except Exception:\n   |                ^^^^^^^^^\n36 |             time.sleep(1)\n   |\n\nFound 1 error.",
+  "command": ".venv/Scripts/python.exe -m ruff check backend/app backend/tests scripts; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; helm lint helm/folio; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; docker compose config --quiet",
+  "directory": "D:\\DEVOPS_PROJ\\DevOps-project",
+  "started_utc": "2026-10-25T13:18:56.6579631+00:00",
+  "finished_utc": "2026-10-25T13:18:58.3390891+00:00",
+  "exit_code": 1
+}

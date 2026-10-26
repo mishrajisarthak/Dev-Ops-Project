@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "D:\DEVOPS_PROJ\DevOps-project\scripts\browser_test.py", line 142, in <module>
+    main()
+  File "D:\DEVOPS_PROJ\DevOps-project\scripts\browser_test.py", line 32, in main
+    page.goto(BASE)
+  File "D:\DEVOPS_PROJ\DevOps-project\.venv\Lib\site-packages\playwright\sync_api\_generated.py", line 18528, in goto
+    self._sync(
+  File "D:\DEVOPS_PROJ\DevOps-project\.venv\Lib\site-packages\playwright\_impl\_sync_base.py", line 111, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "D:\DEVOPS_PROJ\DevOps-project\.venv\Lib\site-packages\playwright\_impl\_page.py", line 564, in goto
+    return await self._main_frame.goto(**locals_to_params(locals()))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DEVOPS_PROJ\DevOps-project\.venv\Lib\site-packages\playwright\_impl\_frame.py", line 157, in goto
+    await self._channel.send(
+  File "D:\DEVOPS_PROJ\DevOps-project\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 78, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DEVOPS_PROJ\DevOps-project\.venv\Lib\site-packages\playwright\_impl\_connection.py", line 636, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/
+Call log:
+  - navigating to "http://localhost:3000/", waiting until "load"
+

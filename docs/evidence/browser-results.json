@@ -1,0 +1,20 @@
+{
+  "base_url": "http://localhost:3000",
+  "passed": 13,
+  "checks": [
+    "overview renders API-backed collection and statistics",
+    "catalog search filters by title",
+    "category filter and pagination work",
+    "catalog exports a real CSV download",
+    "member registration persists through the API",
+    "book creation and editing survive a browser reload",
+    "checkout reserves the only available copy",
+    "return restores inventory and keeps the loan history",
+    "reports render live category and circulation totals",
+    "empty results provide a useful state",
+    "dialog supports Escape and native focus handling",
+    "390px mobile layout and navigation work without page overflow",
+    "no uncaught browser JavaScript errors"
+  ],
+  "runtime_errors": []
+}

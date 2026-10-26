@@ -1,0 +1,18 @@
+PASS overview renders API-backed collection and statistics
+PASS catalog search filters by title
+Traceback (most recent call last):
+PASS category filter and pagination work
+PASS catalog exports a real CSV download
+PASS member registration persists through the API
+PASS book creation and editing survive a browser reload
+PASS checkout reserves the only available copy
+PASS return restores inventory and keeps the loan history
+PASS reports render live category and circulation totals
+PASS empty results provide a useful state
+PASS dialog supports Escape and native focus handling
+  File "D:\DEVOPS_PROJ\DevOps-project\scripts\browser_test.py", line 181, in <module>
+    main()
+  File "D:\DEVOPS_PROJ\DevOps-project\scripts\browser_test.py", line 148, in main
+    mobile = context.new_page(viewport={"width": 390, "height": 844})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BrowserContext.new_page() got an unexpected keyword argument 'viewport'

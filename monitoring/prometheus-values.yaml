@@ -1,0 +1,92 @@
+# Prometheus and Grafana Helm Values for Folio Observability
+# Compatible with prometheus-community/kube-prometheus-stack
+
+prometheus:
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+    serviceMonitorSelector: {}
+    podMonitorSelector: {}
+    ruleSelector: {}
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 5Gi
+
+grafana:
+  enabled: true
+  adminPassword: "admin"
+  service:
+    type: ClusterIP
+    port: 80
+  dashboardProviders:
+    dashboardproviders.yaml:
+      apiVersion: 1
+      providers:
+        - name: "default"
+          orgId: 1
+          folder: ""
+          type: file
+          disableDeletion: false
+          editable: true
+          options:
+            path: /var/lib/grafana/dashboards/default
+  dashboards:
+    default:
+      folio-dashboard:
+        json: |
+          {
+            "annotations": { "list": [] },
+            "editable": true,
+            "title": "Folio Application Metrics",
+            "panels": [
+              {
+                "title": "HTTP Request Volume (req/sec)",
+                "type": "timeseries",
+                "gridPos": { "h": 8, "w": 12, "x": 0, "y": 0 },
+                "targets": [
+                  {
+                    "expr": "sum(rate(http_requests_total[1m]))",
+                    "legendFormat": "Total RPS"
+                  }
+                ]
+              },
+              {
+                "title": "API Request Latency p95 (seconds)",
+                "type": "timeseries",
+                "gridPos": { "h": 8, "w": 12, "x": 12, "y": 0 },
+                "targets": [
+                  {
+                    "expr": "histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[1m])) by (le))",
+                    "legendFormat": "p95 Latency"
+                  }
+                ]
+              },
+              {
+                "title": "HTTP Error Rate (4xx & 5xx)",
+                "type": "timeseries",
+                "gridPos": { "h": 8, "w": 12, "x": 0, "y": 8 },
+                "targets": [
+                  {
+                    "expr": "sum(rate(http_requests_total{status=~\"[45]..\"}[1m]))",
+                    "legendFormat": "Errors/sec"
+                  }
+                ]
+              },
+              {
+                "title": "Active Backend Pod Replicas",
+                "type": "stat",
+                "gridPos": { "h": 8, "w": 12, "x": 12, "y": 8 },
+                "targets": [
+                  {
+                    "expr": "count(up{app=\"folio-backend\"} == 1)",
+                    "legendFormat": "Running Pods"
+                  }
+                ]
+              }
+            ],
+            "schemaVersion": 36,
+            "version": 1
+          }

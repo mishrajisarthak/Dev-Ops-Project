@@ -1,0 +1,9 @@
+{
+  "started_utc": "2026-10-25T13:31:39.0478454+00:00",
+  "exit_code": 0,
+  "finished_utc": "2026-10-25T13:31:43.5841890+00:00",
+  "name": "41-browser-mobile-fixed",
+  "output": "PASS overview renders API-backed collection and statistics\nPASS catalog search filters by title\nPASS category filter and pagination work\nPASS catalog exports a real CSV download\nPASS member registration persists through the API\nPASS book creation and editing survive a browser reload\nPASS checkout reserves the only available copy\nPASS return restores inventory and keeps the loan history\nPASS reports render live category and circulation totals\nPASS empty results provide a useful state\nPASS dialog supports Escape and native focus handling\nPASS 390px mobile layout and navigation work without page overflow\nPASS no uncaught browser JavaScript errors\nAll 13 browser checks passed; 7 application screenshots saved.",
+  "directory": "D:\\DEVOPS_PROJ\\DevOps-project",
+  "command": ".venv/Scripts/python.exe scripts/browser_test.py"
+}

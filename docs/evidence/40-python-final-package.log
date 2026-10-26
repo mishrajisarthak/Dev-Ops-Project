@@ -1,0 +1,149 @@
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=75
+  - wheel
+* Getting build dependencies for sdist...
+running egg_info
+writing folio_library_api.egg-info\PKG-INFO
+writing dependency_links to folio_library_api.egg-info\dependency_links.txt
+writing requirements to folio_library_api.egg-info\requires.txt
+writing top-level names to folio_library_api.egg-info\top_level.txt
+reading manifest file 'folio_library_api.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'folio_library_api.egg-info\SOURCES.txt'
+* Installed build dependency versions:
+  - setuptools==84.2.1
+  - wheel==0.48.0
+* Building sdist...
+running sdist
+running egg_info
+writing folio_library_api.egg-info\PKG-INFO
+writing dependency_links to folio_library_api.egg-info\dependency_links.txt
+writing requirements to folio_library_api.egg-info\requires.txt
+writing top-level names to folio_library_api.egg-info\top_level.txt
+reading manifest file 'folio_library_api.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'folio_library_api.egg-info\SOURCES.txt'
+running check
+creating folio_library_api-2.0.0
+creating folio_library_api-2.0.0\alembic
+creating folio_library_api-2.0.0\alembic\versions
+creating folio_library_api-2.0.0\app
+creating folio_library_api-2.0.0\folio_library_api.egg-info
+creating folio_library_api-2.0.0\tests
+copying files to folio_library_api-2.0.0...
+copying MANIFEST.in -> folio_library_api-2.0.0
+copying README.md -> folio_library_api-2.0.0
+copying alembic.ini -> folio_library_api-2.0.0
+copying pyproject.toml -> folio_library_api-2.0.0
+copying requirements.txt -> folio_library_api-2.0.0
+copying alembic\env.py -> folio_library_api-2.0.0\alembic
+copying alembic\versions\0001_initial_items.py -> folio_library_api-2.0.0\alembic\versions
+copying alembic\versions\0002_library.py -> folio_library_api-2.0.0\alembic\versions
+copying app\__init__.py -> folio_library_api-2.0.0\app
+copying app\config.py -> folio_library_api-2.0.0\app
+copying app\db.py -> folio_library_api-2.0.0\app
+copying app\main.py -> folio_library_api-2.0.0\app
+copying app\migrate.py -> folio_library_api-2.0.0\app
+copying app\models.py -> folio_library_api-2.0.0\app
+copying app\schemas.py -> folio_library_api-2.0.0\app
+copying app\seed.py -> folio_library_api-2.0.0\app
+copying folio_library_api.egg-info\PKG-INFO -> folio_library_api-2.0.0\folio_library_api.egg-info
+copying folio_library_api.egg-info\SOURCES.txt -> folio_library_api-2.0.0\folio_library_api.egg-info
+copying folio_library_api.egg-info\dependency_links.txt -> folio_library_api-2.0.0\folio_library_api.egg-info
+copying folio_library_api.egg-info\requires.txt -> folio_library_api-2.0.0\folio_library_api.egg-info
+copying folio_library_api.egg-info\top_level.txt -> folio_library_api-2.0.0\folio_library_api.egg-info
+copying tests\test_health.py -> folio_library_api-2.0.0\tests
+copying tests\test_library_api.py -> folio_library_api-2.0.0\tests
+Writing folio_library_api-2.0.0\setup.cfg
+Creating tar archive
+removing 'folio_library_api-2.0.0' (and everything under it)
+* Building wheel from sdist
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=75
+  - wheel
+* Getting build dependencies for wheel...
+running egg_info
+writing folio_library_api.egg-info\PKG-INFO
+writing dependency_links to folio_library_api.egg-info\dependency_links.txt
+writing requirements to folio_library_api.egg-info\requires.txt
+writing top-level names to folio_library_api.egg-info\top_level.txt
+reading manifest file 'folio_library_api.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'folio_library_api.egg-info\SOURCES.txt'
+* Installed build dependency versions:
+  - setuptools==84.2.1
+  - wheel==0.48.0
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build\lib\app
+copying app\config.py -> build\lib\app
+copying app\db.py -> build\lib\app
+copying app\main.py -> build\lib\app
+copying app\migrate.py -> build\lib\app
+copying app\models.py -> build\lib\app
+copying app\schemas.py -> build\lib\app
+copying app\seed.py -> build\lib\app
+copying app\__init__.py -> build\lib\app
+running egg_info
+writing folio_library_api.egg-info\PKG-INFO
+writing dependency_links to folio_library_api.egg-info\dependency_links.txt
+writing requirements to folio_library_api.egg-info\requires.txt
+writing top-level names to folio_library_api.egg-info\top_level.txt
+reading manifest file 'folio_library_api.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'folio_library_api.egg-info\SOURCES.txt'
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\app
+copying build\lib\app\config.py -> build\bdist.win-amd64\wheel\.\app
+copying build\lib\app\db.py -> build\bdist.win-amd64\wheel\.\app
+copying build\lib\app\main.py -> build\bdist.win-amd64\wheel\.\app
+copying build\lib\app\migrate.py -> build\bdist.win-amd64\wheel\.\app
+copying build\lib\app\models.py -> build\bdist.win-amd64\wheel\.\app
+copying build\lib\app\schemas.py -> build\bdist.win-amd64\wheel\.\app
+copying build\lib\app\seed.py -> build\bdist.win-amd64\wheel\.\app
+copying build\lib\app\__init__.py -> build\bdist.win-amd64\wheel\.\app
+running install_data
+creating build\bdist.win-amd64\wheel\folio_library_api-2.0.0.data\data
+creating build\bdist.win-amd64\wheel\folio_library_api-2.0.0.data\data\share\folio
+copying alembic.ini -> build\bdist.win-amd64\wheel\folio_library_api-2.0.0.data\data\share\folio
+creating build\bdist.win-amd64\wheel\folio_library_api-2.0.0.data\data\share\folio\alembic
+copying alembic\env.py -> build\bdist.win-amd64\wheel\folio_library_api-2.0.0.data\data\share\folio\alembic
+creating build\bdist.win-amd64\wheel\folio_library_api-2.0.0.data\data\share\folio\alembic\versions
+copying alembic\versions\0001_initial_items.py -> build\bdist.win-amd64\wheel\folio_library_api-2.0.0.data\data\share\folio\alembic\versions
+copying alembic\versions\0002_library.py -> build\bdist.win-amd64\wheel\folio_library_api-2.0.0.data\data\share\folio\alembic\versions
+running install_egg_info
+Copying folio_library_api.egg-info to build\bdist.win-amd64\wheel\.\folio_library_api-2.0.0-py3.12.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\folio_library_api-2.0.0.dist-info\WHEEL
+creating 'D:\\DEVOPS_PROJ\\DevOps-project\\packages\\.tmp-d12vch7q\\folio_library_api-2.0.0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
+adding 'app/__init__.py'
+adding 'app/config.py'
+adding 'app/db.py'
+adding 'app/main.py'
+adding 'app/migrate.py'
+adding 'app/models.py'
+adding 'app/schemas.py'
+adding 'app/seed.py'
+adding 'folio_library_api-2.0.0.data/data/share/folio/alembic.ini'
+adding 'folio_library_api-2.0.0.data/data/share/folio/alembic/env.py'
+adding 'folio_library_api-2.0.0.data/data/share/folio/alembic/versions/0001_initial_items.py'
+adding 'folio_library_api-2.0.0.data/data/share/folio/alembic/versions/0002_library.py'
+adding 'folio_library_api-2.0.0.dist-info/METADATA'
+adding 'folio_library_api-2.0.0.dist-info/WHEEL'
+adding 'folio_library_api-2.0.0.dist-info/top_level.txt'
+adding 'folio_library_api-2.0.0.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+Successfully built folio_library_api-2.0.0.tar.gz and folio_library_api-2.0.0-py3-none-any.whl
+Processing d:\devops_proj\devops-project\packages\folio_library_api-2.0.0-py3-none-any.whl
+Installing collected packages: folio-library-api
+Successfully installed folio-library-api-2.0.0
+
+[notice] A new release of pip is available: 25.0.1 -> 26.2.2
+[notice] To update, run: D:\DEVOPS_PROJ\DevOps-project\.venv\Scripts\python.exe -m pip install --upgrade pip

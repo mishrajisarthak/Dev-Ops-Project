@@ -1,0 +1,9 @@
+{
+  "name": "16-terraform-aws",
+  "directory": "D:/DEVOPS_PROJ/DevOps-project/terraform/aws",
+  "output": "Initializing provider plugins...\n- Finding hashicorp/aws versions matching \"~> 5.50\"...\n- Installing hashicorp/aws v5.100.0...\n- Installed hashicorp/aws v5.100.0 (signed by HashiCorp)\n\nTerraform has created a lock file .terraform.lock.hcl to record the provider\nselections it made above. Include this file in your version control repository\nso that Terraform can guarantee to make the same selections by default when\nyou run \"terraform init\" in the future.\n\nTerraform has been successfully initialized!\n\nYou may now begin working with Terraform. Try running \"terraform plan\" to see\nany changes that are required for your infrastructure. All Terraform commands\nshould now work.\n\nIf you ever set or change modules or backend configuration for Terraform,\nrerun this command to reinitialize your working directory. If you forget, other\ncommands will detect it and remind you to do so if necessary.\nSuccess! The configuration is valid.\n",
+  "exit_code": 0,
+  "finished_utc": "2026-10-25T13:23:18.0363393+00:00",
+  "command": "terraform init -backend=false -input=false -no-color; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; terraform validate -no-color",
+  "started_utc": "2026-10-25T13:22:36.7331147+00:00"
+}

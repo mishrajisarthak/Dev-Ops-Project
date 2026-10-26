@@ -1,0 +1,9 @@
+{
+  "output": "PASS overview renders API-backed collection and statistics\nPASS catalog search filters by title\nTraceback (most recent call last):\nPASS category filter and pagination work\nPASS catalog exports a real CSV download\nPASS member registration persists through the API\nPASS book creation and editing survive a browser reload\nPASS checkout reserves the only available copy\nPASS return restores inventory and keeps the loan history\nPASS reports render live category and circulation totals\nPASS empty results provide a useful state\nPASS dialog supports Escape and native focus handling\n  File \"D:\\DEVOPS_PROJ\\DevOps-project\\scripts\\browser_test.py\", line 181, in <module>\n    main()\n  File \"D:\\DEVOPS_PROJ\\DevOps-project\\scripts\\browser_test.py\", line 148, in main\n    mobile = context.new_page(viewport={\"width\": 390, \"height\": 844})\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: BrowserContext.new_page() got an unexpected keyword argument 'viewport'",
+  "command": ".venv/Scripts/python.exe scripts/browser_test.py",
+  "started_utc": "2026-10-25T13:30:49.7819396+00:00",
+  "directory": "D:\\DEVOPS_PROJ\\DevOps-project",
+  "finished_utc": "2026-10-25T13:30:53.8498496+00:00",
+  "exit_code": 1,
+  "name": "39-browser-final"
+}

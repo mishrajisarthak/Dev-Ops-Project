@@ -1,0 +1,9 @@
+{
+  "started_utc": "2026-10-25T13:22:36.7260269+00:00",
+  "command": "helm template folio helm/folio --namespace folio > docs/evidence/helm-rendered.yaml; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; terraform fmt -recursive terraform; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; terraform fmt -check -recursive terraform",
+  "name": "14-helm-and-terraform",
+  "finished_utc": "2026-10-25T13:22:37.3077204+00:00",
+  "exit_code": 0,
+  "directory": "D:\\DEVOPS_PROJ\\DevOps-project",
+  "output": ""
+}

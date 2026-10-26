@@ -1,0 +1,9 @@
+{
+  "name": "03-frontend-dependencies",
+  "command": "npm install; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; npm install -D vite@latest @vitejs/plugin-react@latest",
+  "started_utc": "2026-10-25T13:16:43.6577878+00:00",
+  "finished_utc": "2026-10-25T13:17:29.8779263+00:00",
+  "exit_code": 0,
+  "directory": "D:/DEVOPS_PROJ/DevOps-project/frontend",
+  "output": "\nadded 69 packages, and audited 70 packages in 37s\n\n9 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities\nnpm warn install-scripts 1 package has install scripts not yet covered by allowScripts:\nnpm warn install-scripts   esbuild@0.25.12 (postinstall: node install.js)\nnpm warn install-scripts\nnpm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.\nnpm notice\nnpm notice New major version of npm available! 11.19.1 -> 12.2.1\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1\nnpm notice To update run: npm install -g npm@12.2.1\nnpm notice\n\nadded 6 packages, removed 52 packages, changed 3 packages, and audited 24 packages in 6s\n\n8 packages are looking for funding\n  run `npm fund` for details\n\nfound 0 vulnerabilities"
+}

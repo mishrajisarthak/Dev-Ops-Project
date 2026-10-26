@@ -1,0 +1,5 @@
+# Example AWS Terraform Variables
+# Copy to terraform.tfvars and customize if needed:
+
+region       = "ap-south-1"
+cluster_name = "folio-eks"

@@ -1,0 +1,9 @@
+{
+  "exit_code": 0,
+  "output": "\n> folio-frontend@2.0.0 package\n> npm pack --pack-destination ../packages\n\nnpm notice\nnpm notice 📦  folio-frontend@2.0.0\nnpm notice Tarball Contents\nnpm notice 233B README.md\nnpm notice 23.2kB dist/assets/index-ComGMWcI.css\nnpm notice 254.0kB dist/assets/index-DH49PWtT.js\nnpm notice 578B dist/index.html\nnpm notice 632B nginx.conf\nnpm notice 614B package.json\nnpm notice Tarball Details\nnpm notice name: folio-frontend\nnpm notice version: 2.0.0\nnpm notice filename: folio-frontend-2.0.0.tgz\nnpm notice package size: 84.6 kB\nnpm notice unpacked size: 279.3 kB\nnpm notice shasum: d527487d1829a89da6f0d78fc7ab0f41f0dd031d\nnpm notice integrity: sha512-oLO+2Jo8H//gF[...]XwuOsugdH0SSQ==\nnpm notice total files: 6\nnpm notice\nfolio-frontend-2.0.0.tgz",
+  "command": "New-Item -ItemType Directory -Force ../packages | Out-Null; npm run package",
+  "finished_utc": "2026-10-25T13:21:33.5382615+00:00",
+  "name": "13-build-web-package",
+  "started_utc": "2026-10-25T13:21:31.4705729+00:00",
+  "directory": "D:/DEVOPS_PROJ/DevOps-project/frontend"
+}

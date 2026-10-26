@@ -1,0 +1,59 @@
+All checks passed!
+PASS workflow job: backend (11 steps)
+PASS workflow job: frontend (8 steps)
+PASS workflow job: integration (15 steps)
+PASS workflow job: images (8 steps)
+PASS workflow YAML, job dependencies, package permissions and image matrix
+
+FullName
+--------
+D:\DEVOPS_PROJ\DevOps-project\backend\app\__init__.py
+D:\DEVOPS_PROJ\DevOps-project\backend\app\config.py
+D:\DEVOPS_PROJ\DevOps-project\backend\app\db.py
+D:\DEVOPS_PROJ\DevOps-project\backend\app\main.py
+D:\DEVOPS_PROJ\DevOps-project\backend\app\migrate.py
+D:\DEVOPS_PROJ\DevOps-project\backend\app\models.py
+D:\DEVOPS_PROJ\DevOps-project\backend\app\schemas.py
+D:\DEVOPS_PROJ\DevOps-project\backend\app\seed.py
+D:\DEVOPS_PROJ\DevOps-project\backend\app\__pycache__\__init__.cpython-312.pyc
+D:\DEVOPS_PROJ\DevOps-project\backend\app\__pycache__\config.cpython-312.pyc
+D:\DEVOPS_PROJ\DevOps-project\backend\app\__pycache__\db.cpython-312.pyc
+D:\DEVOPS_PROJ\DevOps-project\backend\app\__pycache__\main.cpython-312.pyc
+D:\DEVOPS_PROJ\DevOps-project\backend\app\__pycache__\migrate.cpython-312.pyc
+D:\DEVOPS_PROJ\DevOps-project\backend\app\__pycache__\models.cpython-312.pyc
+D:\DEVOPS_PROJ\DevOps-project\backend\app\__pycache__\schemas.cpython-312.pyc
+D:\DEVOPS_PROJ\DevOps-project\backend\app\__pycache__\seed.cpython-312.pyc
+D:\DEVOPS_PROJ\DevOps-project\frontend\src\api.js
+D:\DEVOPS_PROJ\DevOps-project\frontend\src\api.test.js
+D:\DEVOPS_PROJ\DevOps-project\frontend\src\main.jsx
+D:\DEVOPS_PROJ\DevOps-project\frontend\src\styles.css
+D:\DEVOPS_PROJ\DevOps-project\.github\workflows\delivery.yml
+D:\DEVOPS_PROJ\DevOps-project\helm\folio\Chart.yaml
+D:\DEVOPS_PROJ\DevOps-project\helm\folio\values.yaml
+D:\DEVOPS_PROJ\DevOps-project\helm\folio\templates\backend-deployment.yaml
+D:\DEVOPS_PROJ\DevOps-project\helm\folio\templates\backend-service.yaml
+D:\DEVOPS_PROJ\DevOps-project\helm\folio\templates\frontend-deployment.yaml
+D:\DEVOPS_PROJ\DevOps-project\helm\folio\templates\frontend-service.yaml
+D:\DEVOPS_PROJ\DevOps-project\helm\folio\templates\hpa.yaml
+D:\DEVOPS_PROJ\DevOps-project\helm\folio\templates\ingress.yaml
+D:\DEVOPS_PROJ\DevOps-project\helm\folio\templates\postgres.yaml
+D:\DEVOPS_PROJ\DevOps-project\helm\folio\templates\servicemonitor.yaml
+D:\DEVOPS_PROJ\DevOps-project\scripts\browser_test.py
+D:\DEVOPS_PROJ\DevOps-project\scripts\check_action_refs.py
+D:\DEVOPS_PROJ\DevOps-project\scripts\check_workflow.py
+D:\DEVOPS_PROJ\DevOps-project\scripts\concurrency_test.py
+D:\DEVOPS_PROJ\DevOps-project\scripts\generate_screenshots.py
+D:\DEVOPS_PROJ\DevOps-project\scripts\record-command.ps1
+D:\DEVOPS_PROJ\DevOps-project\scripts\seed.py
+D:\DEVOPS_PROJ\DevOps-project\scripts\smoke.py
+D:\DEVOPS_PROJ\DevOps-project\scripts\verify_installed_package.py
+D:\DEVOPS_PROJ\DevOps-project\scripts\verify_migrations.py
+D:\DEVOPS_PROJ\DevOps-project\scripts\verify_persistence.py
+
+
+Algorithm Hash                                                             Path
+--------- ----                                                             ----
+SHA256    64D8E262FB1B8DF8AF2209FEB017468FD0333E97AC034002ACBD56C40FF44103 D:\DEVOPS_PROJ\DevOps-project\packages\foli…
+SHA256    DACE99D67535728B40E8418DF9D5E02DDAF20C523EA70420F18FC051D15ACD3D D:\DEVOPS_PROJ\DevOps-project\packages\foli…
+SHA256    A286D93383ABE775C39C8B73BE2B33C8367D24D0B49489FF8C5F3923EE70183E D:\DEVOPS_PROJ\DevOps-project\packages\foli…
+

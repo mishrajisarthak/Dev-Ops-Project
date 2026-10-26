@@ -1,0 +1,9 @@
+{
+  "directory": "D:\\DEVOPS_PROJ\\DevOps-project",
+  "command": ".venv/Scripts/python.exe -m ruff check backend/app backend/tests scripts; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; .venv/Scripts/python.exe scripts/check_workflow.py; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; helm lint helm/folio; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; terraform fmt -check -recursive terraform",
+  "exit_code": 0,
+  "started_utc": "2026-10-25T13:30:21.2591381+00:00",
+  "name": "38-final-code-checks",
+  "finished_utc": "2026-10-25T13:30:21.9338007+00:00",
+  "output": "All checks passed!\nPASS workflow job: backend (10 steps)\nPASS workflow job: frontend (8 steps)\nPASS workflow job: integration (15 steps)\nPASS workflow job: images (8 steps)\nPASS workflow YAML, job dependencies, package permissions and image matrix\n==> Linting helm/folio\n[INFO] Chart.yaml: icon is recommended\n\n1 chart(s) linted, 0 chart(s) failed"
+}

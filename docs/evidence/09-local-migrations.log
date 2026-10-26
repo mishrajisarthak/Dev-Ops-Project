@@ -1,0 +1,8 @@
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> 0001_initial_items, Initial schema migration: create items table for FindSpot Lost and Found.
+INFO  [alembic.runtime.migration] Running upgrade 0001_initial_items -> 0002_library, Add library tables; retain any existing legacy items without destructive conversion.
+Running database migrations...
+Database migrations applied successfully.
+Seeded 8 titles, 21 copies, 6 members, 5 open loans (2 overdue), and 1 returned loan.
+Library already contains records; seed skipped (no changes).

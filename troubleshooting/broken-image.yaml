@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: broken-backend-image
+  namespace: folio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: broken-image
+  template:
+    metadata:
+      labels:
+        app: broken-image
+    spec:
+      containers:
+        - name: app
+          image: ghcr.io/jash2511/folio-backend:v999-does-not-exist
+          ports:
+            - containerPort: 8000

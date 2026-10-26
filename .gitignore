@@ -1,0 +1,53 @@
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+env/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node & Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+override.tf
+override.tf.json
+*._override.tf
+*._override.tf.json
+.terraform.lock.hcl
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Local runtime data and package output
+*.db
+*.db-shm
+*.db-wal
+packages/
+build/
+*.egg-info/
+docs/evidence/*.html
+docs/evidence/helm-rendered.yaml
+docs/evidence/terraform-providers-*/

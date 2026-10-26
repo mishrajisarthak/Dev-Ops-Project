@@ -1,0 +1,49 @@
+NAME             IMAGE                     COMMAND                  SERVICE    CREATED              STATUS                          PORTS
+folio-backend    devops-project-backend    "sh -c 'python -m ap…"   backend    About a minute ago   Up About a minute (healthy)     0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp
+folio-frontend   devops-project-frontend   "/docker-entrypoint.…"   frontend   About a minute ago   Up About a minute (unhealthy)   0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp
+folio-postgres   postgres:17-alpine        "docker-entrypoint.s…"   postgres   About a minute ago   Up About a minute (healthy)     0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+folio-frontend  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+folio-frontend  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+folio-frontend  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+folio-frontend  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+folio-frontend  | 10-listen-on-ipv6-by-default.sh: info: /etc/nginx/conf.d/default.conf differs from the packaged version
+folio-frontend  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+folio-frontend  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+folio-frontend  | 20-envsubst-on-templates.sh: Running envsubst on /etc/nginx/templates/default.conf.template to /etc/nginx/conf.d/default.conf
+folio-frontend  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+folio-frontend  | /docker-entrypoint.sh: Configuration complete; ready for start up
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: using the "epoll" event method
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: nginx/1.31.7
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0) 
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: OS: Linux 6.18.54.1-microsoft-standard-WSL2
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: start worker processes
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: start worker process 35
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: start worker process 36
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: start worker process 37
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: start worker process 38
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: start worker process 39
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: start worker process 40
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: start worker process 41
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: start worker process 42
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: start worker process 43
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: start worker process 44
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: start worker process 45
+folio-frontend  | 2026/10/25 13:21:10 [notice] 1#1: start worker process 46
+{"Status":"unhealthy","FailingStreak":10,"Log":[{"Start":"2026-10-25T13:22:05.906823543Z","End":"2026-10-25T13:22:05.933927072Z","ExitCode":1,"Output":"wget: can't connect to remote host: Connection refused\n"},{"Start":"2026-10-25T13:22:15.934066317Z","End":"2026-10-25T13:22:15.962732883Z","ExitCode":1,"Output":"wget: can't connect to remote host: Connection refused\n"},{"Start":"2026-10-25T13:22:25.963045845Z","End":"2026-10-25T13:22:25.990475009Z","ExitCode":1,"Output":"wget: can't connect to remote host: Connection refused\n"},{"Start":"2026-10-25T13:22:35.991244283Z","End":"2026-10-25T13:22:36.022132944Z","ExitCode":1,"Output":"wget: can't connect to remote host: Connection refused\n"},{"Start":"2026-10-25T13:22:46.02244984Z","End":"2026-10-25T13:22:46.048992843Z","ExitCode":1,"Output":"wget: can't connect to remote host: Connection refused\n"}]}
+Connecting to 127.0.0.1:8080 (127.0.0.1:8080)
+  HTTP/1.1 200 OK
+  Server: nginx/1.31.7
+  Date: Sun, 25 Oct 2026 13:22:53 GMT
+  Content-Type: text/html
+  Content-Length: 578
+  Last-Modified: Sun, 25 Oct 2026 13:20:38 GMT
+  Connection: close
+  ETag: "6ade0226-242"
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Accept-Ranges: bytes
+  
+saving to '/dev/null'
+null                 100% |********************************|   578  0:00:00 ETA
+'/dev/null' saved

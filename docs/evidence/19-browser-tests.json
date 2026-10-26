@@ -1,0 +1,9 @@
+{
+  "started_utc": "2026-10-25T13:23:19.5883574+00:00",
+  "output": "Traceback (most recent call last):\n  File \"D:\\DEVOPS_PROJ\\DevOps-project\\scripts\\browser_test.py\", line 142, in <module>\n    main()\n  File \"D:\\DEVOPS_PROJ\\DevOps-project\\scripts\\browser_test.py\", line 32, in main\n    page.goto(BASE)\n  File \"D:\\DEVOPS_PROJ\\DevOps-project\\.venv\\Lib\\site-packages\\playwright\\sync_api\\_generated.py\", line 18528, in goto\n    self._sync(\n  File \"D:\\DEVOPS_PROJ\\DevOps-project\\.venv\\Lib\\site-packages\\playwright\\_impl\\_sync_base.py\", line 111, in _sync\n    return task.result()\n           ^^^^^^^^^^^^^\n  File \"D:\\DEVOPS_PROJ\\DevOps-project\\.venv\\Lib\\site-packages\\playwright\\_impl\\_page.py\", line 564, in goto\n    return await self._main_frame.goto(**locals_to_params(locals()))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\DEVOPS_PROJ\\DevOps-project\\.venv\\Lib\\site-packages\\playwright\\_impl\\_frame.py\", line 157, in goto\n    await self._channel.send(\n  File \"D:\\DEVOPS_PROJ\\DevOps-project\\.venv\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 78, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\DEVOPS_PROJ\\DevOps-project\\.venv\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 636, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/\nCall log:\n  - navigating to \"http://localhost:3000/\", waiting until \"load\"\n",
+  "finished_utc": "2026-10-25T13:23:20.6750601+00:00",
+  "command": ".venv/Scripts/python.exe scripts/browser_test.py",
+  "directory": "D:\\DEVOPS_PROJ\\DevOps-project",
+  "exit_code": 1,
+  "name": "19-browser-tests"
+}

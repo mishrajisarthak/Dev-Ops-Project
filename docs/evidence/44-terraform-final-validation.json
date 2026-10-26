@@ -1,0 +1,9 @@
+{
+  "command": "terraform -chdir=terraform/azure validate -no-color; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; terraform -chdir=terraform/aws validate -no-color; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; terraform fmt -check -recursive terraform; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; helm template folio helm/folio --namespace folio --set monitoring.serviceMonitor.enabled=true --set postgres.storage.storageClass=standard > docs/evidence/helm-rendered.yaml; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; Write-Output \"PASS Azure, AWS, formatting and Helm optional resources render\"",
+  "exit_code": 0,
+  "directory": "D:\\DEVOPS_PROJ\\DevOps-project",
+  "output": "Success! The configuration is valid.\n\nSuccess! The configuration is valid.\n\nPASS Azure, AWS, formatting and Helm optional resources render",
+  "name": "44-terraform-final-validation",
+  "finished_utc": "2026-10-25T13:31:58.2577803+00:00",
+  "started_utc": "2026-10-25T13:31:55.0131378+00:00"
+}

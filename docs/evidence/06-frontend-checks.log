@@ -1,0 +1,33 @@
+
+> folio-frontend@2.0.0 test
+> node --test src/api.test.js
+
+✔ API requests use the same-origin proxy and preserve method/body (31.436ms)
+✔ empty 204 responses do not attempt to parse JSON (0.2326ms)
+✔ business errors reach the UI (0.8808ms)
+✔ validation errors include field and reason (0.4278ms)
+✔ non-JSON server failures have a readable fallback (0.4103ms)
+✔ CSV export escapes quotes and neutralizes spreadsheet formulas (0.9031ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1130.316
+
+> folio-frontend@2.0.0 build
+> vite build
+
+vite v8.3.5 building client environment for production...
+transforming...
+✓ 1577 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.57 kB │ gzip:  0.37 kB
+dist/assets/index-ComGMWcI.css   23.23 kB │ gzip:  6.02 kB
+dist/assets/index-DH49PWtT.js   254.01 kB │ gzip: 78.09 kB
+
+✓ built in 162ms
+found 0 vulnerabilities

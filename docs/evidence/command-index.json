@@ -1,0 +1,436 @@
+[
+  {
+    "command": ".venv/Scripts/python.exe -m pip install -r backend/requirements-dev.txt build playwright pyyaml",
+    "exit_code": 0,
+    "record": "01-python-dependencies.json",
+    "screenshots": [
+      "terminal-01-python-dependencies-01.png",
+      "terminal-01-python-dependencies-02.png",
+      "terminal-01-python-dependencies-03.png",
+      "terminal-01-python-dependencies-04.png",
+      "terminal-01-python-dependencies-05.png"
+    ]
+  },
+  {
+    "command": "node --version; docker info --format \"{{.ServerVersion}}\"; helm version --short; terraform version",
+    "exit_code": 0,
+    "record": "02-toolchain.json",
+    "screenshots": [
+      "terminal-02-toolchain-01.png"
+    ]
+  },
+  {
+    "command": "npm install; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; npm install -D vite@latest @vitejs/plugin-react@latest",
+    "exit_code": 0,
+    "record": "03-frontend-dependencies.json",
+    "screenshots": [
+      "terminal-03-frontend-dependencies-01.png"
+    ]
+  },
+  {
+    "command": "../.venv/Scripts/python.exe -m pytest -v --junitxml=../docs/evidence/pytest.xml",
+    "exit_code": 1,
+    "record": "04-api-tests.json",
+    "screenshots": [
+      "terminal-04-api-tests-01.png",
+      "terminal-04-api-tests-02.png",
+      "terminal-04-api-tests-03.png"
+    ]
+  },
+  {
+    "command": "../.venv/Scripts/python.exe -m pytest -v --junitxml=../docs/evidence/pytest.xml",
+    "exit_code": 0,
+    "record": "05-api-tests-fixed.json",
+    "screenshots": [
+      "terminal-05-api-tests-fixed-01.png",
+      "terminal-05-api-tests-fixed-02.png"
+    ]
+  },
+  {
+    "command": "npm test; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; npm run build; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; npm audit --audit-level=high",
+    "exit_code": 0,
+    "record": "06-frontend-checks.json",
+    "screenshots": [
+      "terminal-06-frontend-checks-01.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe -m ruff check backend/app backend/tests scripts; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; helm lint helm/folio; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; docker compose config --quiet",
+    "exit_code": 1,
+    "record": "07-static-checks.json",
+    "screenshots": [
+      "terminal-07-static-checks-01.png"
+    ]
+  },
+  {
+    "command": "docker compose up --build --wait --wait-timeout 180",
+    "exit_code": 1,
+    "record": "08-container-build.json",
+    "screenshots": [
+      "terminal-08-container-build-01.png",
+      "terminal-08-container-build-02.png",
+      "terminal-08-container-build-03.png",
+      "terminal-08-container-build-04.png",
+      "terminal-08-container-build-05.png",
+      "terminal-08-container-build-06.png",
+      "terminal-08-container-build-07.png",
+      "terminal-08-container-build-08.png",
+      "terminal-08-container-build-09.png",
+      "terminal-08-container-build-10.png",
+      "terminal-08-container-build-11.png",
+      "terminal-08-container-build-12.png",
+      "terminal-08-container-build-13.png",
+      "terminal-08-container-build-14.png",
+      "terminal-08-container-build-15.png",
+      "terminal-08-container-build-16.png"
+    ]
+  },
+  {
+    "command": "../.venv/Scripts/python.exe -m app.migrate; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; ../.venv/Scripts/python.exe -m app.seed; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; ../.venv/Scripts/python.exe -m app.seed",
+    "exit_code": 0,
+    "record": "09-local-migrations.json",
+    "screenshots": [
+      "terminal-09-local-migrations-01.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe -m playwright install chromium",
+    "exit_code": 0,
+    "record": "10-browser-runtime.json",
+    "screenshots": [
+      "terminal-10-browser-runtime-01.png",
+      "terminal-10-browser-runtime-02.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe -m ruff check backend/app backend/tests scripts; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; .venv/Scripts/python.exe -m bandit -r backend/app -ll; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; .venv/Scripts/python.exe scripts/check_workflow.py; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; helm lint helm/folio; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; docker compose config --quiet",
+    "exit_code": 0,
+    "record": "11-static-checks-fixed.json",
+    "screenshots": [
+      "terminal-11-static-checks-fixed-01.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe -m build backend --outdir packages",
+    "exit_code": 0,
+    "record": "12-build-python-packages.json",
+    "screenshots": [
+      "terminal-12-build-python-packages-01.png",
+      "terminal-12-build-python-packages-02.png",
+      "terminal-12-build-python-packages-03.png",
+      "terminal-12-build-python-packages-04.png"
+    ]
+  },
+  {
+    "command": "New-Item -ItemType Directory -Force ../packages | Out-Null; npm run package",
+    "exit_code": 0,
+    "record": "13-build-web-package.json",
+    "screenshots": [
+      "terminal-13-build-web-package-01.png"
+    ]
+  },
+  {
+    "command": "helm template folio helm/folio --namespace folio > docs/evidence/helm-rendered.yaml; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; terraform fmt -recursive terraform; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; terraform fmt -check -recursive terraform",
+    "exit_code": 0,
+    "record": "14-helm-and-terraform.json",
+    "screenshots": [
+      "terminal-14-helm-and-terraform-01.png"
+    ]
+  },
+  {
+    "command": "terraform init -backend=false -input=false -no-color; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; terraform validate -no-color",
+    "exit_code": 0,
+    "record": "15-terraform-azure.json",
+    "screenshots": [
+      "terminal-15-terraform-azure-01.png"
+    ]
+  },
+  {
+    "command": "terraform init -backend=false -input=false -no-color; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; terraform validate -no-color",
+    "exit_code": 0,
+    "record": "16-terraform-aws.json",
+    "screenshots": [
+      "terminal-16-terraform-aws-01.png"
+    ]
+  },
+  {
+    "command": "docker compose ps; docker compose logs --tail 60 frontend; docker inspect folio-frontend --format \"{{json .State.Health}}\"; docker compose exec -T frontend wget -S -O /dev/null http://127.0.0.1:8080/",
+    "exit_code": 0,
+    "record": "17-container-diagnostics.json",
+    "screenshots": [
+      "terminal-17-container-diagnostics-01.png",
+      "terminal-17-container-diagnostics-02.png"
+    ]
+  },
+  {
+    "command": "docker compose up --build --wait --wait-timeout 180; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; docker compose exec -T backend python -m app.seed; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; docker compose ps",
+    "exit_code": 0,
+    "record": "18-container-health-fixed.json",
+    "screenshots": [
+      "terminal-18-container-health-fixed-01.png",
+      "terminal-18-container-health-fixed-02.png",
+      "terminal-18-container-health-fixed-03.png",
+      "terminal-18-container-health-fixed-04.png",
+      "terminal-18-container-health-fixed-05.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe scripts/browser_test.py",
+    "exit_code": 1,
+    "record": "19-browser-tests.json",
+    "screenshots": [
+      "terminal-19-browser-tests-01.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe scripts/browser_test.py",
+    "exit_code": 1,
+    "record": "20-browser-tests-ready.json",
+    "screenshots": [
+      "terminal-20-browser-tests-ready-01.png"
+    ]
+  },
+  {
+    "command": "docker compose exec -T postgres createdb -U folio folio_test; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; $env:TEST_DATABASE_URL=\"postgresql+psycopg://folio:folio_secret@localhost:5432/folio_test\"; Set-Location backend; ../.venv/Scripts/python.exe -m pytest -v --junitxml=../docs/evidence/pytest-postgres.xml",
+    "exit_code": 0,
+    "record": "21-postgres-api-tests.json",
+    "screenshots": [
+      "terminal-21-postgres-api-tests-01.png",
+      "terminal-21-postgres-api-tests-02.png"
+    ]
+  },
+  {
+    "command": "docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v folio_trivy_cache:/root/.cache/ aquasec/trivy:latest image --exit-code 1 --severity HIGH,CRITICAL --ignore-unfixed devops-project-backend:latest",
+    "exit_code": 1,
+    "record": "22-trivy-runtime.json",
+    "screenshots": [
+      "terminal-22-trivy-runtime-01.png",
+      "terminal-22-trivy-runtime-02.png",
+      "terminal-22-trivy-runtime-03.png",
+      "terminal-22-trivy-runtime-04.png",
+      "terminal-22-trivy-runtime-05.png",
+      "terminal-22-trivy-runtime-06.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe scripts/browser_test.py",
+    "exit_code": 1,
+    "record": "23-browser-tests-locators.json",
+    "screenshots": [
+      "terminal-23-browser-tests-locators-01.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe scripts/smoke.py http://localhost:3000; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; .venv/Scripts/python.exe scripts/concurrency_test.py",
+    "exit_code": 0,
+    "record": "24-live-api-checks.json",
+    "screenshots": [
+      "terminal-24-live-api-checks-01.png"
+    ]
+  },
+  {
+    "command": "docker compose logs --tail 35 backend; docker compose exec -T backend python -m pip list; docker compose exec -T backend python -m pip --version",
+    "exit_code": 0,
+    "record": "25-browser-diagnostics.json",
+    "screenshots": [
+      "terminal-25-browser-diagnostics-01.png",
+      "terminal-25-browser-diagnostics-02.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe scripts/diagnose_dialog.py",
+    "exit_code": 1,
+    "record": "26-checkout-dialog-diagnostics.json",
+    "screenshots": [
+      "terminal-26-checkout-dialog-diagnostics-01.png"
+    ]
+  },
+  {
+    "command": "docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v folio_trivy_cache:/root/.cache/ aquasec/trivy:latest image --quiet --scanners vuln --exit-code 1 --severity HIGH,CRITICAL --ignore-unfixed devops-project-frontend:latest",
+    "exit_code": 1,
+    "record": "27-front-image-scan.json",
+    "screenshots": [
+      "terminal-27-front-image-scan-01.png"
+    ]
+  },
+  {
+    "command": "docker compose up --build --wait --wait-timeout 180",
+    "exit_code": 0,
+    "record": "28-rebuild-verified-images.json",
+    "screenshots": [
+      "terminal-28-rebuild-verified-images-01.png",
+      "terminal-28-rebuild-verified-images-02.png",
+      "terminal-28-rebuild-verified-images-03.png",
+      "terminal-28-rebuild-verified-images-04.png",
+      "terminal-28-rebuild-verified-images-05.png",
+      "terminal-28-rebuild-verified-images-06.png",
+      "terminal-28-rebuild-verified-images-07.png",
+      "terminal-28-rebuild-verified-images-08.png"
+    ]
+  },
+  {
+    "command": "npx --yes prettier --write src/main.jsx src/styles.css src/api.js src/api.test.js vite.config.js index.html",
+    "exit_code": 0,
+    "record": "29-format-frontend.json",
+    "screenshots": [
+      "terminal-29-format-frontend-01.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe -m ruff format backend/app backend/tests scripts",
+    "exit_code": 0,
+    "record": "30-format-python.json",
+    "screenshots": [
+      "terminal-30-format-python-01.png"
+    ]
+  },
+  {
+    "command": "docker compose up --build --wait --wait-timeout 180",
+    "exit_code": 0,
+    "record": "31-final-container-build.json",
+    "screenshots": [
+      "terminal-31-final-container-build-01.png",
+      "terminal-31-final-container-build-02.png",
+      "terminal-31-final-container-build-03.png",
+      "terminal-31-final-container-build-04.png",
+      "terminal-31-final-container-build-05.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe scripts/check_action_refs.py",
+    "exit_code": 1,
+    "record": "32-workflow-action-refs.json",
+    "screenshots": [
+      "terminal-32-workflow-action-refs-01.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe scripts/verify_migrations.py",
+    "exit_code": 0,
+    "record": "33-migration-compatibility.json",
+    "screenshots": [
+      "terminal-33-migration-compatibility-01.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe scripts/browser_test.py",
+    "exit_code": 1,
+    "record": "34-browser-complete.json",
+    "screenshots": [
+      "terminal-34-browser-complete-01.png"
+    ]
+  },
+  {
+    "command": "docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v folio_trivy_cache:/root/.cache/ aquasec/trivy:latest image --quiet --scanners vuln --exit-code 1 --severity HIGH,CRITICAL --ignore-unfixed devops-project-backend:latest; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v folio_trivy_cache:/root/.cache/ aquasec/trivy:latest image --quiet --scanners vuln --exit-code 1 --severity HIGH,CRITICAL --ignore-unfixed devops-project-frontend:latest",
+    "exit_code": 0,
+    "record": "35-final-image-scans.json",
+    "screenshots": [
+      "terminal-35-final-image-scans-01.png",
+      "terminal-35-final-image-scans-02.png",
+      "terminal-35-final-image-scans-03.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe scripts/check_action_refs.py",
+    "exit_code": 0,
+    "record": "36-workflow-action-refs-fixed.json",
+    "screenshots": [
+      "terminal-36-workflow-action-refs-fixed-01.png"
+    ]
+  },
+  {
+    "command": "npm test; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; npm run build; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; npm run package",
+    "exit_code": 0,
+    "record": "37-final-frontend-package.json",
+    "screenshots": [
+      "terminal-37-final-frontend-package-01.png",
+      "terminal-37-final-frontend-package-02.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe -m ruff check backend/app backend/tests scripts; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; .venv/Scripts/python.exe scripts/check_workflow.py; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; helm lint helm/folio; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; terraform fmt -check -recursive terraform",
+    "exit_code": 0,
+    "record": "38-final-code-checks.json",
+    "screenshots": [
+      "terminal-38-final-code-checks-01.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe scripts/browser_test.py",
+    "exit_code": 1,
+    "record": "39-browser-final.json",
+    "screenshots": [
+      "terminal-39-browser-final-01.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe -m build backend --outdir packages; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; .venv/Scripts/python.exe -m pip install --no-deps --force-reinstall packages/folio_library_api-2.0.0-py3-none-any.whl",
+    "exit_code": 0,
+    "record": "40-python-final-package.json",
+    "screenshots": [
+      "terminal-40-python-final-package-01.png",
+      "terminal-40-python-final-package-02.png",
+      "terminal-40-python-final-package-03.png",
+      "terminal-40-python-final-package-04.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe scripts/browser_test.py",
+    "exit_code": 0,
+    "record": "41-browser-mobile-fixed.json",
+    "screenshots": [
+      "terminal-41-browser-mobile-fixed-01.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe scripts/verify_persistence.py; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; docker compose ps",
+    "exit_code": 0,
+    "record": "42-persistence-restart.json",
+    "screenshots": [
+      "terminal-42-persistence-restart-01.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe scripts/verify_installed_package.py",
+    "exit_code": 0,
+    "record": "43-installed-wheel-check.json",
+    "screenshots": [
+      "terminal-43-installed-wheel-check-01.png"
+    ]
+  },
+  {
+    "command": "terraform -chdir=terraform/azure validate -no-color; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; terraform -chdir=terraform/aws validate -no-color; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; terraform fmt -check -recursive terraform; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; helm template folio helm/folio --namespace folio --set monitoring.serviceMonitor.enabled=true --set postgres.storage.storageClass=standard > docs/evidence/helm-rendered.yaml; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; Write-Output \"PASS Azure, AWS, formatting and Helm optional resources render\"",
+    "exit_code": 0,
+    "record": "44-terraform-final-validation.json",
+    "screenshots": [
+      "terminal-44-terraform-final-validation-01.png"
+    ]
+  },
+  {
+    "command": "docker compose up --wait --wait-timeout 60; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; docker compose ps; docker compose exec -T backend id; docker compose exec -T frontend id; (Invoke-RestMethod http://localhost:3000/health) | ConvertTo-Json; (Invoke-RestMethod http://localhost:3000/ready) | ConvertTo-Json; $metricResponse = Invoke-WebRequest http://localhost:3000/metrics; Write-Output (\"Metrics HTTP \" + $metricResponse.StatusCode); Write-Output (($metricResponse.Content -split \"`n\" | Select-String \"http_requests_total\" | Select-Object -First 5) -join \"`n\"); Get-ChildItem packages | Select-Object Name,Length",
+    "exit_code": 0,
+    "record": "45-final-health-and-metrics.json",
+    "screenshots": [
+      "terminal-45-final-health-and-metrics-01.png",
+      "terminal-45-final-health-and-metrics-02.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe -m ruff check backend/app backend/tests scripts; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; .venv/Scripts/python.exe scripts/check_workflow.py; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; Get-ChildItem backend/app,frontend/src,.github/workflows,helm/folio,scripts -File -Recurse | Select-Object FullName; Get-FileHash packages/* -Algorithm SHA256 | Format-Table -AutoSize",
+    "exit_code": 0,
+    "record": "46-final-source-inventory.json",
+    "screenshots": [
+      "terminal-46-final-source-inventory-01.png",
+      "terminal-46-final-source-inventory-02.png"
+    ]
+  },
+  {
+    "command": ".venv/Scripts/python.exe scripts/generate_screenshots.py",
+    "exit_code": 0,
+    "record": "47-evidence-screenshots.json",
+    "screenshots": [
+      "terminal-47-evidence-screenshots-01.png",
+      "terminal-47-evidence-screenshots-02.png"
+    ]
+  }
+]

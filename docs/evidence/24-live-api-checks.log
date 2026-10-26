@@ -1,0 +1,15 @@
+PASS GET    /health -> 200
+PASS GET    /ready -> 200
+PASS GET    /api/books -> 200
+PASS GET    /api/members -> 200
+PASS GET    /api/loans -> 200
+PASS GET    /api/stats -> 200
+PASS POST   /api/books -> 201
+PASS POST   /api/members -> 201
+PASS POST   /api/loans -> 201
+PASS GET    /api/books/10 -> 200
+PASS POST   /api/loans/7/return -> 200
+PASS GET    /api/books/10 -> 200
+PASS full library lifecycle; inventory restored. Test loan retained for audit.
+PASS 8 simultaneous checkouts: 1 issued, 7 conflicts, stock = 0
+PASS 8 simultaneous returns: 1 returned, 7 conflicts, stock = 1

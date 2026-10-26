@@ -1,0 +1,9 @@
+{
+  "finished_utc": "2026-10-25T13:25:59.6425370+00:00",
+  "directory": "D:\\DEVOPS_PROJ\\DevOps-project",
+  "output": "PASS GET    /health -> 200\nPASS GET    /ready -> 200\nPASS GET    /api/books -> 200\nPASS GET    /api/members -> 200\nPASS GET    /api/loans -> 200\nPASS GET    /api/stats -> 200\nPASS POST   /api/books -> 201\nPASS POST   /api/members -> 201\nPASS POST   /api/loans -> 201\nPASS GET    /api/books/10 -> 200\nPASS POST   /api/loans/7/return -> 200\nPASS GET    /api/books/10 -> 200\nPASS full library lifecycle; inventory restored. Test loan retained for audit.\nPASS 8 simultaneous checkouts: 1 issued, 7 conflicts, stock = 0\nPASS 8 simultaneous returns: 1 returned, 7 conflicts, stock = 1",
+  "command": ".venv/Scripts/python.exe scripts/smoke.py http://localhost:3000; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; .venv/Scripts/python.exe scripts/concurrency_test.py",
+  "started_utc": "2026-10-25T13:25:58.5872597+00:00",
+  "exit_code": 0,
+  "name": "24-live-api-checks"
+}

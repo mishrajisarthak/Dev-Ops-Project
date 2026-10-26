@@ -1,0 +1,9 @@
+{
+  "output": "src/main.jsx 119ms\nsrc/styles.css 117ms\nsrc/api.js 9ms\nsrc/api.test.js 5ms\nvite.config.js 2ms (unchanged)\nindex.html 22ms",
+  "exit_code": 0,
+  "directory": "D:/DEVOPS_PROJ/DevOps-project/frontend",
+  "name": "29-format-frontend",
+  "started_utc": "2026-10-25T13:28:18.6135425+00:00",
+  "finished_utc": "2026-10-25T13:28:22.4491844+00:00",
+  "command": "npx --yes prettier --write src/main.jsx src/styles.css src/api.js src/api.test.js vite.config.js index.html"
+}

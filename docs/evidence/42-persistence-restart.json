@@ -1,0 +1,9 @@
+{
+  "started_utc": "2026-10-25T13:31:55.0131377+00:00",
+  "command": ".venv/Scripts/python.exe scripts/verify_persistence.py; if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }; docker compose ps",
+  "exit_code": 0,
+  "finished_utc": "2026-10-25T13:32:01.7853209+00:00",
+  "output": " Container folio-postgres Restarting \n Container folio-backend Restarting \n Container folio-postgres Started \n Container folio-backend Started \nBefore restart: {'books': 14, 'members': 12, 'loans': 11}\nAfter restart: {'books': 14, 'members': 12, 'loans': 11}\nPASS: all book, member and loan fields retained across database and application restarts.\nNAME             IMAGE                     COMMAND                  SERVICE    CREATED         STATUS                            PORTS\nfolio-backend    devops-project-backend    \"sh -c 'python -m ap…\"   backend    2 minutes ago   Up 2 seconds (health: starting)   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp\nfolio-frontend   devops-project-frontend   \"/docker-entrypoint.…\"   frontend   2 minutes ago   Up 2 minutes (healthy)            0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp\nfolio-postgres   postgres:17-alpine        \"docker-entrypoint.s…\"   postgres   8 minutes ago   Up 5 seconds (healthy)            0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp",
+  "name": "42-persistence-restart",
+  "directory": "D:\\DEVOPS_PROJ\\DevOps-project"
+}

@@ -1,0 +1,9 @@
+apiVersion: v2
+name: folio
+description: Helm chart for Folio cloud-native Library Management platform
+type: application
+version: 2.0.0
+appVersion: "2.0.0"
+maintainers:
+  - name: Jash
+    email: jash2511@users.noreply.github.com

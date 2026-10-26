@@ -1,0 +1,39 @@
+ Container folio-frontend Running 
+ Container folio-postgres Running 
+ Container folio-backend Running 
+ Container folio-postgres Waiting 
+ Container folio-postgres Healthy 
+ Container folio-backend Waiting 
+ Container folio-backend Healthy 
+ Container folio-backend Waiting 
+ Container folio-frontend Waiting 
+ Container folio-postgres Waiting 
+ Container folio-postgres Healthy 
+ Container folio-frontend Healthy 
+ Container folio-backend Healthy 
+NAME             IMAGE                     COMMAND                  SERVICE    CREATED          STATUS                        PORTS
+folio-backend    devops-project-backend    "sh -c 'python -m ap…"   backend    4 minutes ago    Up About a minute (healthy)   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp
+folio-frontend   devops-project-frontend   "/docker-entrypoint.…"   frontend   4 minutes ago    Up 4 minutes (healthy)        0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp
+folio-postgres   postgres:17-alpine        "docker-entrypoint.s…"   postgres   10 minutes ago   Up About a minute (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+uid=1001(appuser) gid=1001(appgroup) groups=1001(appgroup)
+uid=101(nginx) gid=101(nginx) groups=101(nginx)
+{
+  "status": "UP",
+  "version": "2.0.0"
+}
+{
+  "status": "READY"
+}
+Metrics HTTP 200
+# HELP http_requests_total Total number of requests by method, status and handler.
+# TYPE http_requests_total counter
+http_requests_total{handler="/ready",method="GET",status="2xx"} 2.0
+http_requests_total{handler="/api/books",method="GET",status="2xx"} 1.0
+http_requests_total{handler="/api/members",method="GET",status="2xx"} 1.0
+
+Name                                     Length
+----                                     ------
+folio_library_api-2.0.0-py3-none-any.whl  11742
+folio_library_api-2.0.0.tar.gz            11466
+folio-frontend-2.0.0.tgz                  84581
+

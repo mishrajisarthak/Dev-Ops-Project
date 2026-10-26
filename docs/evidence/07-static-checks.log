@@ -1,0 +1,11 @@
+BLE001 Do not catch blind exception: `Exception`
+  --> scripts\verify_persistence.py:35:16
+   |
+33 |                     ready = True
+34 |                     break
+35 |         except Exception:
+   |                ^^^^^^^^^
+36 |             time.sleep(1)
+   |
+
+Found 1 error.

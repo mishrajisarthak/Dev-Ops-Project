@@ -1,0 +1,9 @@
+{
+  "exit_code": 0,
+  "finished_utc": "2026-10-25T13:28:23.3949891+00:00",
+  "started_utc": "2026-10-25T13:28:22.9188614+00:00",
+  "directory": "D:\\DEVOPS_PROJ\\DevOps-project",
+  "command": ".venv/Scripts/python.exe -m ruff format backend/app backend/tests scripts",
+  "name": "30-format-python",
+  "output": "13 files reformatted, 5 files left unchanged"
+}

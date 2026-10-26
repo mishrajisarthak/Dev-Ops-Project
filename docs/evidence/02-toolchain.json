@@ -1,0 +1,9 @@
+{
+  "name": "02-toolchain",
+  "exit_code": 0,
+  "finished_utc": "2026-10-25T13:11:28.7756912+00:00",
+  "started_utc": "2026-10-25T13:11:21.5757449+00:00",
+  "command": "node --version; docker info --format \"{{.ServerVersion}}\"; helm version --short; terraform version",
+  "output": "v24.22.0\n29.8.2\nv4.3.1+gc0d08d0\nTerraform v1.16.6\non windows_amd64\n\nYour version of Terraform is out of date! The latest version\nis 1.17.0. You can update by downloading from https://developer.hashicorp.com/terraform/install",
+  "directory": "D:\\DEVOPS_PROJ\\DevOps-project"
+}

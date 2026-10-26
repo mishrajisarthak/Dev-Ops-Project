@@ -1,0 +1,10 @@
+PASS actions/checkout@v6: d23441a48e516b6c34aea4fa41551a30e30af803
+PASS actions/setup-node@v6: 249970729cb0ef3589644e2896645e5dc5ba9c38
+PASS actions/setup-python@v6: ece7cb06caefa5fff74198d8649806c4678c61a1
+PASS actions/upload-artifact@v4: ea165f8d65b6e75b540449e92b4886f43607fa02
+PASS aquasecurity/trivy-action@v0.36.0: a9c7b0f06e461e9d4b4d1711f154ee024b8d7ab8
+PASS azure/setup-helm@v4.3.1: 1a275c3b69536ee54be43f2070a358922e12c8d4
+PASS docker/build-push-action@v6: 10e90e3645eae34f1e60eeb005ba3a3d33f178e8
+PASS docker/login-action@v3: c94ce9fb468520275223c153574b00df6fe4bcc9
+PASS docker/metadata-action@v5: c299e40c65443455700f0fdfc63efafe5b349051
+PASS docker/setup-buildx-action@v3: 8d2750c68a42422c14e847fe6c8ac0403b4cbd6f

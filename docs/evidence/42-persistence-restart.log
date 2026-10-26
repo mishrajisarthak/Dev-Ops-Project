@@ -1,0 +1,11 @@
+ Container folio-postgres Restarting 
+ Container folio-backend Restarting 
+ Container folio-postgres Started 
+ Container folio-backend Started 
+Before restart: {'books': 14, 'members': 12, 'loans': 11}
+After restart: {'books': 14, 'members': 12, 'loans': 11}
+PASS: all book, member and loan fields retained across database and application restarts.
+NAME             IMAGE                     COMMAND                  SERVICE    CREATED         STATUS                            PORTS
+folio-backend    devops-project-backend    "sh -c 'python -m ap…"   backend    2 minutes ago   Up 2 seconds (health: starting)   0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp
+folio-frontend   devops-project-frontend   "/docker-entrypoint.…"   frontend   2 minutes ago   Up 2 minutes (healthy)            0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp
+folio-postgres   postgres:17-alpine        "docker-entrypoint.s…"   postgres   8 minutes ago   Up 5 seconds (healthy)            0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp

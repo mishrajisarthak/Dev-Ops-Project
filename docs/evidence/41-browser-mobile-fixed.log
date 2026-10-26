@@ -1,0 +1,14 @@
+PASS overview renders API-backed collection and statistics
+PASS catalog search filters by title
+PASS category filter and pagination work
+PASS catalog exports a real CSV download
+PASS member registration persists through the API
+PASS book creation and editing survive a browser reload
+PASS checkout reserves the only available copy
+PASS return restores inventory and keeps the loan history
+PASS reports render live category and circulation totals
+PASS empty results provide a useful state
+PASS dialog supports Escape and native focus handling
+PASS 390px mobile layout and navigation work without page overflow
+PASS no uncaught browser JavaScript errors
+All 13 browser checks passed; 7 application screenshots saved.
